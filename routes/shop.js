@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
     const products = adminData.products;
 
     // 템플릿 엔진 사용 시
-    // res.render('shop', {prods : products, pageTitle: 'Shop', path:'/'}); // Pug
     res.render('shop', {
         prods: products,
         pageTitle: 'Shop',
@@ -17,7 +16,6 @@ router.get('/', (req, res) => {
         activeShop: true,
         productCSS: true
     });
-    // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 });
 
 module.exports = router;
